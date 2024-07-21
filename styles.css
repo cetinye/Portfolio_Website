@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.game-icon {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.game-icon:hover {
+    transform: scale(1.05);
+}
+
+.game-icon img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.game-icon p {
+    margin: 10px 0 0;
+    font-size: 16px;
+}
