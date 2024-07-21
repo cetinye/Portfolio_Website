@@ -25,15 +25,7 @@
             <button>RESEARCH</button>
             <button>CV</button>
         </div>
-    </div>
-	<script>
-        function navigateTo(page) {
-            window.location.href = page;
-        }
-    </script>
-	
-	<h1>My Unity WebGL Games</h1>
-    <div class="game-grid">
+		<div class="game-grid">
         <div class="game-icon" onclick="openGame('TestGame')">
             <img src="GameIcons/Arcane_Archive.png" alt="Game 1">
             <p>Game 1</p>
@@ -44,9 +36,13 @@
         </div>
         <!-- Add more game icons as needed -->
     </div>
-
-    <script>
-        function openGame(game) {
+    </div>
+	<script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+		
+		function openGame(game) {
             window.location.href = `/Portfolio_Website/Projects/WebGL_Games/${game}/index.html`;
         }
     </script>
