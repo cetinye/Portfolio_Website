@@ -33,7 +33,65 @@
             const contentDiv = document.getElementById('content');
             switch(section) {
                 case 'career':
-                    contentDiv.innerHTML = '<h2>Career</h2><p>Details about your career...</p>';
+                    contentDiv.innerHTML = `
+                        <h2>Career</h2>
+							<div class="timeline">
+							  <div class="infocontainer left">
+								<div class="infocontent">
+								<h2>Oct 2023 - Present</h2>
+									<h3>JUNIOR GAME DEVELOPER</h3>
+										<h4><a href="https://laborbilisim.com/">LABOR Bilisim</a></h4>
+											<p>Developed 2D and 3D hyper-casual / casual games for Witmina app which aims to collect cognitive data and helps users to build their cognitive skills. During my work, I made 23 games, updated previously released games, and took part in the development of the Witmina app in Unity.  I have hands-on experience with Unity addressables, Firebase, and building for multiple platforms. I took part in testing of both games and the app. I effectively used Github and GitLab with SourceTree. I participated in the brainstorming of new ideas.</p>
+								</div>
+							  </div>
+							  <div class="infocontainer right">
+								<div class="infocontent">
+								  <h2>June 2023</h2>
+									<h3>GRADUATION</h3>
+										<h4>Atilim University</h4>
+											<p>Graduated from Software Engineering with a CGPA of 3.42 / 4</p>
+								</div>
+							  </div>
+							  <div class="infocontainer left">
+								<div class="infocontent">
+								<h2>June 2023</h2>
+									<h3>GRADUATION PROJECT</h3>
+										<h4><a href="https://youtu.be/zatwyxHv6Ls">ECE VR</a></h4>
+											<p>My graduation project was developing an existing TUBITAK project (112K287) called "ECE (Endonöroşirurji Cerrahi Eğitimi)" into VR. ECE is a simulation developed for surgical residents to practice their hand-eye coordination before performing surgery on people. ECE VR simulation provides a user experience set in a realistic surgical operating room environment with various scenarios. Throughout this process, the simulation allows users to view their own progress and compare it with their previous experience by tracking various in game parameters. ECE VR project is presented and tested by surgical residents at Hacettepe University Neurology Department.</p>
+								</div>
+							  </div>
+							  <div class="infocontainer right">
+								<div class="infocontent">
+								<h2>June 2023</h2>
+									<h3>1. PLACE AWARD</h3>
+										<h4><a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop">Genç Beyinler Yeni Fikirler Ankara</a></h4>
+											<p>First place in "Sectoral Solutions" category. Genç Beyinler Yeni Fikirler is an inter-university graduation projects competition in Turkey. Our team placed first in the sectoral solutions category and won 10.000 ₺.</p>
+								</div>
+							  </div>
+							  <div class="infocontainer left">
+								<div class="infocontent">
+								<h2>March 2023</h2>
+									<h3>RESEARCH</h3>
+										<h4><a href="https://doi.org/10.21125/inted.2023.1627">Understanding User Experience (UX) For Virtual Reality Based Surgical Training</a></h4>
+											<p>During my education, I participated in a research with a VR simulation we developed with my teammates. Simulation is developed in Unity with Meta Oculus Quest 2 VR device. My role was developing the simulation in Unity 3D.</p>
+								</div>
+							  </div>
+							  <div class="infocontainer right">
+								<div class="infocontent">
+								  <h2>Jul 2022 - Aug 2022 (2 Months)</h2>
+									<h3>INTERN</h3>
+										<h4><a href="https://www.rootcraft.net/">Rootcraft Game Technologies</a></h4>
+											<p>Developed a 3D hyper-casual game called "Pinball Race" which combines stacking and racing mechanics with AI bots and uses swerve controls. Used and managed third-party assets like Dreamteck Splines. Handled animations and particles. Effectively used Github with SourceTree. Participated in brainstorming of new game ideas.</p>
+								</div>
+							  </div>
+							  <div class="infocontainer left">
+								<div class="infocontent">
+								  <h2>Aug 2021 - Aug 2021 (1 Month)</h2>
+									<h3>INTERN</h3>
+										<h4><a href="https://www.kuixo.com/">KUIXO</a></h4>
+											<p>Developed a 2D hyper-casual game called "Big Dot" which combines puzzle and merge mechanics and uses tap controls. Created dynamic generation of levels from text. Used and managed third-party assets like ITween & DoTween. Effectively used Github with SourceTree. Participated in brainstorming of new game ideas. Prepared Game Design Document for the project.</p>
+								</div>
+                    `;
                     break;
                 case 'projects':
                     contentDiv.innerHTML = `
