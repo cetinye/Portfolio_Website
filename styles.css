@@ -14,6 +14,7 @@ body {
 h1 {
     margin: 20px 0;
     font-size: 36px;
+    color: #FFFFFF;
 }
 
 .profile {
@@ -28,7 +29,7 @@ h1 {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 3px solid #000000;
+    border: 3px solid #FFFFFF;
 }
 
 .social-icons {
@@ -50,8 +51,8 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    border-top: 2px solid #000000;
-    border-bottom: 2px solid #000000;
+    border-top: 2px solid #FFFFFF;
+    border-bottom: 2px solid #FFFFFF;
     padding: 10px 0;
 }
 
@@ -61,43 +62,36 @@ h1 {
     border-radius: 20px;
     padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px;
     transition: background-color 0.3s;
 }
 
 .nav button:hover {
-    background-color: #cccccc;
+    background-color: #DDDDDD;
+}
+
+.content {
+    margin-top: 20px;
+    color: #FFFFFF;
 }
 
 .game-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 20px;
-    padding: 20px;
+    justify-content: center;
 }
 
 .game-icon {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 10px;
     width: 150px;
     text-align: center;
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.game-icon:hover {
-    transform: scale(1.05);
 }
 
 .game-icon img {
     width: 100%;
     height: auto;
-    border-radius: 4px;
 }
 
 .game-icon p {
-    margin: 10px 0 0;
-    font-size: 16px;
+    margin-top: 10px;
 }
