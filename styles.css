@@ -14,7 +14,7 @@ body {
 h1 {
     margin: 20px 0;
     font-size: 36px;
-    color: ##000000;
+    color: #FFFFFF;
 }
 
 .profile {
@@ -29,7 +29,7 @@ h1 {
     width: 150px;
     height: 150px;
     object-fit: cover;
-    border: 3px solid ##000000;
+    border: 3px solid #000000;
 }
 
 .social-icons {
@@ -51,8 +51,8 @@ h1 {
     display: flex;
     justify-content: center;
     gap: 10px;
-    border-top: 2px solid ##000000;
-    border-bottom: 2px solid ##000000;
+    border-top: 2px solid #000000;
+    border-bottom: 2px solid #000000;
     padding: 10px 0;
 }
 
@@ -88,8 +88,10 @@ h1 {
 }
 
 .game-icon img {
+	border-radius: 50%;
     width: 100%;
     height: auto;
+	border: 3px solid #000000;
 }
 
 .game-icon p {
