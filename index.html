@@ -3,27 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Unity WebGL Games</title>
+    <title>Yunus Emre Çetin</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>My Unity WebGL Games</h1>
-    <div class="game-grid">
-        <div class="game-icon" onclick="openGame('TestGame')">
-            <img src="GameIcons/Arcane_Archive.png" alt="Game 1">
-            <p>Game 1</p>
+    <div class="container">
+        <h1>Yunus Emre Çetin</h1>
+        <div class="profile">
+            <img src="Icons/ProfilePicture" alt="Yunus Emre Çetin">
+            <div class="social-icons">
+                <a href="mailto:cetinye@hotmail.com"><img src="Icons/Email.png" alt="Email"></a>
+                <a href="https://github.com/cetinye"><img src="Icons/Github.png" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/cetinye"><img src="Icons/Linkedin.png" alt="LinkedIn"></a>
+                <a href="https://cetinye.itch.io"><img src="Icons/ItchIO.png" alt="ItchIO"></a>
+            </div>
         </div>
-        <div class="game-icon" onclick="openGame('game2')">
-            <img src="GameIcons/Customs_Scanner.png" alt="Game 2">
-            <p>Game 2</p>
+        <div class="nav">
+            <button>CAREER</button>
+            <button onclick="navigateTo('/Portfolio_Website/Projects/index.html"')">PROJECTS</button>
+            <button>AWARDS</button>
+            <button>RESEARCH</button>
+            <button>CV</button>
         </div>
-        <!-- Add more game icons as needed -->
     </div>
-
-    <script>
-        function openGame(game) {
-            window.location.href = `/Portfolio_Website/WebGL_Games/${game}/index.html`;
-        }
-    </script>
 </body>
 </html>
