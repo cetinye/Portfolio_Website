@@ -1,11 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yunus Emre Çetin</title>
     <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
+    <style>
+        .game-gridWebGL, .game-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .game-icon {
+            cursor: pointer;
+            text-align: center;
+        }
+        .game-icon img {
+            width: 100px;
+            height: 100px;
+        }
+        .iframe-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .iframe-overlay:target {
+            display: flex;
+        }
+        .iframe-container {
+            position: relative;
+            width: 80%;
+            height: 80%;
+            background-color: #fff;
+        }
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #f00;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    </style>
 </head>
 
 <body>
@@ -30,6 +82,13 @@
         <div id="content" class="content"></div>
     </div>
 
+    <div id="gameOverlay" class="iframe-overlay">
+        <div class="iframe-container">
+            <a href="#" class="close-button">&times;</a>
+            <iframe id="gameIframe" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+
     <script>
         function showContent(section) {
             const contentDiv = document.getElementById('content');
@@ -40,125 +99,65 @@
                 case 'career':
                     contentDiv.innerHTML = `
                         <h2>Career</h2>
-                        <div class="timeline">
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>Oct 2023 - Present</h2>
-                                    <h3>JUNIOR GAME DEVELOPER</h3>
-                                    <h4><a href="https://laborbilisim.com/" target="_blank">LABOR Bilisim</a></h4>
-                                    <p>Developed 2D and 3D hyper-casual / casual games for Witmina app which aims to collect cognitive data and helps users to build their cognitive skills. During my work, I made 23 games, updated previously released games, and took part in the development of the Witmina app in Unity.  I have hands-on experience with Unity addressables, Firebase, and building for multiple platforms. I took part in testing of both games and the app. I effectively used Github and GitLab with SourceTree. I participated in the brainstorming of new ideas.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer right">
-                                <div class="infocontent">
-                                    <h2>June 2023</h2>
-                                    <h3>GRADUATION</h3>
-                                    <h4><a href="https://www.atilim.edu.tr/en/se" target="_blank">Atilim University</a></h4>
-                                    <p>Graduated from Software Engineering with a CGPA of 3.42 / 4.00</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>June 2023</h2>
-                                    <h3>GRADUATION PROJECT</h3>
-                                    <h4><a href="https://youtu.be/zatwyxHv6Ls" target="_blank">ECE VR</a></h4>
-                                    <p>My graduation project was developing an existing TUBITAK project (112K287) called "ECE (Endonöroşirurji Cerrahi Eğitimi)" into VR. ECE is a simulation developed for surgical residents to practice their hand-eye coordination before performing surgery on people. ECE VR simulation provides a user experience set in a realistic surgical operating room environment with various scenarios. Throughout this process, the simulation allows users to view their own progress and compare it with their previous experience by tracking various in game parameters. ECE VR project is presented and tested by surgical residents at Hacettepe University Neurology Department.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer right">
-                                <div class="infocontent">
-                                    <h2>June 2023</h2>
-                                    <h3>1. PLACE AWARD</h3>
-                                    <h4><a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop" target="_blank">Genç Beyinler Yeni Fikirler Ankara</a></h4>
-                                    <p>First place in "Sectoral Solutions" category. Genç Beyinler Yeni Fikirler is an inter-university graduation projects competition in Turkey. Our team placed first in the sectoral solutions category and won 10.000 ₺.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>March 2023</h2>
-                                    <h3>RESEARCH</h3>
-                                    <h4><a href="https://doi.org/10.21125/inted.2023.1627" target="_blank">Understanding User Experience (UX) For Virtual Reality Based Surgical Training</a></h4>
-                                    <p>During my education, I participated in a research with a VR simulation we developed with my teammates. Simulation is developed in Unity with Meta Oculus Quest 2 VR device. My role was developing the simulation in Unity 3D.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer right">
-                                <div class="infocontent">
-                                    <h2>Jul 2022 - Aug 2022 (2 Months)</h2>
-                                    <h3>INTERN</h3>
-                                    <h4><a href="https://www.rootcraft.net/" target="_blank">Rootcraft Game Technologies</a></h4>
-                                    <p>Developed a 3D hyper-casual game called "Pinball Race" which combines stacking and racing mechanics with AI bots and uses swerve controls. Used and managed third-party assets like Dreamteck Splines. Handled animations and particles. Effectively used Github with SourceTree. Participated in brainstorming of new game ideas.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>Aug 2021 - Aug 2021 (1 Month)</h2>
-                                    <h3>INTERN</h3>
-                                    <h4><a href="https://www.kuixo.com/" target="_blank">KUIXO</a></h4>
-                                    <p>Developed a 2D hyper-casual game called "Big Dot" which combines puzzle and merge mechanics and uses tap controls. Created dynamic generation of levels from text. Used and managed third-party assets like ITween & DoTween. Effectively used Github with SourceTree. Participated in brainstorming of new game ideas. Prepared Game Design Document for the project.</p>
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Career content here -->
                     `;
                     break;
                 case 'projects':
                     contentDiv.innerHTML = `
                         <h2>Projects</h2>
                         <h3>WebGL Playable Games</h3>
+                        <h4>Unity Junior Programmer Lesson Works</h4>
                         <div class="game-gridWebGL">
-                            <div class="game-icon" onclick="openGame('TestGame')">
-                                <img src="GameIcons/Arcane_Archive.png" alt="Game 1">
-                                <p>Game 1</p>
+                            <div class="game-icon">
+                                <a href="#gameOverlay" onclick="document.getElementById('gameIframe').src='https://example.com/games/TestGame/index.html'">
+                                    <img src="GameIcons/Arcane_Archive.png" alt="Game 1">
+                                    <p>Game 1</p>
+                                </a>
                             </div>
-                            <div class="game-icon" onclick="openGame('game2')">
-                                <img src="GameIcons/Customs_Scanner.png" alt="Game 2">
-                                <p>Game 2</p>
+                            <div class="game-icon">
+                                <a href="#gameOverlay" onclick="document.getElementById('gameIframe').src='https://itch.io/embed-upload/3407868?color=1e1e1e'">
+                                    <img src="GameIcons/C5.png" alt="Game 2">
+                                    <p>Game 2</p>
+                                </a>
                             </div>
                             <!-- Add more game icons as needed -->
                         </div>
                         <h3>Other Games</h3>
                         <div class="game-grid">
-                            <div class="game-icon" onclick="openGame('TestGame')">
-                                <img src="GameIcons/Arcane_Archive.png" alt="Game 1">
-                                <p>Game 1</p>
+                            <div class="game-icon">
+                                <a href="#gameOverlay" onclick="document.getElementById('gameIframe').src='https://example.com/games/TestGame/index.html'">
+                                    <img src="GameIcons/Arcane_Archive.png" alt="Game 1">
+                                    <p>Game 1</p>
+                                </a>
                             </div>
-                            <div class="game-icon" onclick="openGame('game2')">
-                                <img src="GameIcons/Customs_Scanner.png" alt="Game 2">
-                                <p>Game 2</p>
+                            <div class="game-icon">
+                                <a href="#gameOverlay" onclick="document.getElementById('gameIframe').src='https://example.com/games/game2/index.html'">
+                                    <img src="GameIcons/Customs_Scanner.png" alt="Game 2">
+                                    <p>Game 2</p>
+                                </a>
                             </div>
                             <!-- Add more game icons as needed -->
                         </div>
                     `;
                     break;
                 case 'awards':
-					contentDiv.innerHTML = `
-							<h2>Awards</h2>
-							<h3>1st Place In Sectoral Solutions Category!</h3>
-							<span style= "font-family: 'Ubuntu'"; "font-weight: normal;">Genç Beyinler Yeni Fikirler is an inter-university graduation projects competition in Turkey. Our team placed first in the sectoral solutions category and won 10.000 ₺.</span>
-							<p>
-								<a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop" target="_blank">(link to linkedin post)</a>
-							</p>
-							<a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop" target="_blank">
-								<img src="Awards/linkedinPost.png" alt="Linkedin Post">
-							</a>
-						`;
-					break;
-				case 'research':
-					contentDiv.innerHTML = `
-					<h2>Research</h2>
-					<h3>Research Title:<span style="font-weight: normal;"> Understanding User Experience (UX) For Virtual Reality Based Surgical Training</span> </h3>
-					<h3>Role:<span style="font-weight: normal;"> Developing the simulation in Unity 3D to be used in the virtual reality surgical training.</span> </h3>
-					<p>
-						<a href="https://doi.org/10.21125/inted.2023.1627" target="_blank">(https://doi.org/10.21125/inted.2023.1627)</a>
-					</p>
-					<embed src="https://doi.org/10.21125/inted.2023.1627" width="1200" height="1080" type="application/pdf"></embed>
-					`;
-					break;
-				case 'cv':
-					contentDiv.innerHTML = '<a href="CV/Yunus_Emre_Cetin_CV.pdf">Download CV</a>';
-					break;
-				default:
-					contentDiv.innerHTML = '';
-					break;
+                    contentDiv.innerHTML = `
+                        <h2>Awards</h2>
+                        <!-- Awards content here -->
+                    `;
+                    break;
+                case 'research':
+                    contentDiv.innerHTML = `
+                        <h2>Research</h2>
+                        <!-- Research content here -->
+                    `;
+                    break;
+                case 'cv':
+                    contentDiv.innerHTML = '<a href="CV/Yunus_Emre_Cetin_CV.pdf">Download CV</a>';
+                    break;
+                default:
+                    contentDiv.innerHTML = '';
+                    break;
             }
 
             // Set the active button class
@@ -168,16 +167,11 @@
             }
         }
 
-        function openGame(gameName) {
-            window.open(`Games/${gameName}.html`, '_blank');
+        function openCV() {
+            window.open('CV/Yunus_Emre_Cetin_CV.pdf', '_blank');
         }
-		
-		function openCV() {
-			window.open('CV/Yunus_Emre_Cetin_CV.pdf', '_blank');
-		}
-		
-		showContent('career')
+
+        showContent('career');
     </script>
 </body>
-
 </html>

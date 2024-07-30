@@ -5,6 +5,7 @@ body {
     background-color: #1e1e1e;
     color: #000000;
     text-align: center;
+	line-height: 1.5;
 }
 
 /* Unvisited link */
@@ -122,15 +123,16 @@ h1 {
 }
 
 .game-icon {
-    width: 150px;
+    width: 143px;
+    height: 143px;
     text-align: center;
     cursor: pointer;
 }
 
 .game-icon img {
-    border-radius: 50%;
+    border-radius: 25%;
     width: 100%;
-    height: auto;
+    height: 100%;
     border: 3px solid #000000;
 }
 
@@ -140,6 +142,15 @@ h1 {
 
 * {
     box-sizing: border-box;
+}
+
+.iframe-container {
+	display: none;
+	margin-top: 20px;
+}
+
+.iframe-container.active {
+    display: block;
 }
 
 /* The actual timeline (the vertical ruler) */
