@@ -32,6 +32,25 @@ a:active {
     padding: 20px;
 }
 
+/* Scroll Animations for Timeline */
+.infocontainer {
+    opacity: 0;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.infocontainer.left {
+    transform: translateX(-20px);
+}
+
+.infocontainer.right {
+    transform: translateX(20px);
+}
+
+.infocontainer.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 h1 {
     margin: 20px 0;
     font-size: 36px;
