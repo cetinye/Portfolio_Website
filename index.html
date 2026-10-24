@@ -1,218 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet'>
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yunus Emre Çetin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yunus Emre Çetin — Game Developer (Unity &amp; C#)</title>
+    <meta name="description" content="Game developer and software engineer with 3 years of professional Unity and C# experience and 40+ mobile games on the App Store and Google Play.">
+    <link rel="canonical" href="https://cetinye.dev/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cetinye.dev/">
+    <meta property="og:title" content="Yunus Emre Çetin — Game Developer (Unity &amp; C#)">
+    <meta property="og:description" content="3 years of professional Unity and C# experience. 40+ mobile games on the App Store and Google Play.">
+    <meta property="og:image" content="https://cetinye.dev/img/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Yunus Emre Çetin, Game Developer, Unity and C#">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="container">
-        <h1>Yunus Emre Çetin</h1>
-        <div class="profile">
-            <img src="Icons/ProfilePicture.png" alt="Yunus Emre Çetin">
-            <div class="social-icons">
-                <a href="mailto:cetinye@hotmail.com" target="_blank"><img src="Icons/Email.png" alt="Email"></a>
-                <a href="https://github.com/cetinye" target="_blank"><img src="Icons/Github.png" alt="GitHub"></a>
-                <a href="https://linkedin.com/in/cetinye" target="_blank"><img src="Icons/Linkedin.png"
-                        alt="LinkedIn"></a>
-                <a href="https://cetinye.itch.io" target="_blank"><img src="Icons/ItchIO.png" alt="ItchIO"></a>
+    <nav class="topbar">
+        <a href="#top" class="brand">Yunus Emre Çetin</a>
+        <div class="links">
+            <a href="#work">Work</a>
+            <a href="#publication">Publication</a>
+            <a href="#experience">Experience</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </nav>
+
+    <main>
+        <header id="top" class="hero">
+            <img src="img/profile.webp" alt="Yunus Emre Çetin" width="200" height="200">
+            <div>
+                <h1>Yunus Emre Çetin</h1>
+                <p class="role">Game Developer · Unity &amp; C#</p>
+                <p>Software engineer with 3 years of professional Unity and C# experience and 40+ mobile games shipped.</p>
+                <p class="contact">
+                    <a href="mailto:cetinye@hotmail.com">cetinye@hotmail.com</a>
+                    <a href="https://linkedin.com/in/cetinye">LinkedIn</a>
+                    <a href="https://github.com/cetinye">GitHub</a>
+                    <a href="https://cetinye.itch.io">itch.io</a>
+                </p>
             </div>
-        </div>
-        <div class="nav">
-            <button onclick="showContent('career')"><b>CAREER</b></button>
-            <button onclick="showContent('projects')"><b>PROJECTS</b></button>
-            <button onclick="showContent('awards')"><b>AWARDS</b></button>
-            <button onclick="showContent('research')"><b>RESEARCH</b></button>
-            <button onclick="openCV()"><b>CV</b></button>
-        </div>
-        <div id="content" class="content"></div>
-    </div>
+        </header>
 
-    <script>
-        function showContent(section) {
-            const contentDiv = document.getElementById('content');
-            const buttons = document.querySelectorAll('.nav button');
-            buttons.forEach(btn => btn.classList.remove('active'));
+        <section id="work">
+            <h2>Selected work</h2>
 
-            switch (section) {
-                case 'career':
-                    contentDiv.innerHTML = `
-                        <h2>Career</h2>
-                        <div class="timeline">
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>Oct 2023 - Present</h2>
-                                    <h3>JUNIOR GAME DEVELOPER</h3>
-                                    <h4><a href="https://laborbilisim.com/" target="_blank">LABOR Bilisim</a></h4>
-                                    <p>Developed 2D and 3D hyper-casual / casual games for Witmina app which aims to collect cognitive data and helps users to build their cognitive skills. During my work, I made 23 games, updated previously released games, and took part in the development of the Witmina app in Unity.  I have hands-on experience with Unity addressables, Firebase, and building for multiple platforms. I took part in testing of both games and the app. I effectively used Github and GitLab with SourceTree. I participated in the brainstorming of new ideas.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer right">
-                                <div class="infocontent">
-                                    <h2>June 2023</h2>
-                                    <h3>GRADUATION</h3>
-                                    <h4><a href="https://www.atilim.edu.tr/en/se" target="_blank">Atilim University</a></h4>
-                                    <p>Graduated from Software Engineering with a CGPA of 3.42 / 4.00</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>June 2023</h2>
-                                    <h3>GRADUATION PROJECT</h3>
-                                    <h4><a href="https://youtu.be/zatwyxHv6Ls" target="_blank">ECE VR</a></h4>
-                                    <p>My graduation project was developing an existing TUBITAK project (112K287) called "ECE (Endonöroşirurji Cerrahi Eğitimi)" into VR. ECE is a simulation developed for surgical residents to practice their hand-eye coordination before performing surgery on people. ECE VR simulation provides a user experience set in a realistic surgical operating room environment with various scenarios. Throughout this process, the simulation allows users to view their own progress and compare it with their previous experience by tracking various in game parameters. ECE VR project is presented and tested by surgical residents at Hacettepe University Neurology Department.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer right">
-                                <div class="infocontent">
-                                    <h2>June 2023</h2>
-                                    <h3>1. PLACE AWARD</h3>
-                                    <h4><a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop" target="_blank">Genç Beyinler Yeni Fikirler Ankara</a></h4>
-                                    <p>First place in "Sectoral Solutions" category. Genç Beyinler Yeni Fikirler is an inter-university graduation projects competition in Turkey. Our team placed first in the sectoral solutions category and won 10.000 ₺.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>March 2023</h2>
-                                    <h3>RESEARCH</h3>
-                                    <h4><a href="https://doi.org/10.21125/inted.2023.1627" target="_blank">Understanding User Experience (UX) For Virtual Reality Based Surgical Training</a></h4>
-                                    <p>During my education, I participated in a research with a VR simulation we developed with my teammates. Simulation is developed in Unity with Meta Oculus Quest 2 VR device. My role was developing the simulation in Unity 3D.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer right">
-                                <div class="infocontent">
-                                    <h2>Jul 2022 - Aug 2022 (2 Months)</h2>
-                                    <h3>INTERN</h3>
-                                    <h4><a href="https://www.rootcraft.net/" target="_blank">Rootcraft Game Technologies</a></h4>
-                                    <p>Developed a 3D hyper-casual game called "Pinball Race" which combines stacking and racing mechanics with AI bots and uses swerve controls. Used and managed third-party assets like Dreamteck Splines. Handled animations and particles. Effectively used Github with SourceTree. Participated in brainstorming of new game ideas.</p>
-                                </div>
-                            </div>
-                            <div class="infocontainer left">
-                                <div class="infocontent">
-                                    <h2>Aug 2021 - Aug 2021 (1 Month)</h2>
-                                    <h3>INTERN</h3>
-                                    <h4><a href="https://www.kuixo.com/" target="_blank">KUIXO</a></h4>
-                                    <p>Developed a 2D hyper-casual game called "Big Dot" which combines puzzle and merge mechanics and uses tap controls. Created dynamic generation of levels from text. Used and managed third-party assets like ITween & DoTween. Effectively used Github with SourceTree. Participated in brainstorming of new game ideas. Prepared Game Design Document for the project.</p>
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                    break;
-                case 'projects':
-                    contentDiv.innerHTML = `
-                        <h2>Projects</h2>
-						<h3>Hobby Projects</h3>
-                        <div class="game-grid">
-                            <div>
-								<iframe frameborder="0" src="https://itch.io/embed/3252812?bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=1e1e1e" width="208" height="167"><a href="https://cetinye.itch.io/battleship-online">Battleship Online by cetinye</a></iframe>
-								<p>Online Battleships Game</p>
-							</div>
-                        </div>
-                        <h3>Unity Junior Programmer Lesson Works</h3>
-                        <div class="game-gridWebGL">
-                            <div>
-                                <iframe frameborder="0" src="https://itch.io/embed/933725?border_width=0&amp;bg_color=1e1e1e&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=3e3e42" width="206" height="165"><a href="https://cetinye.itch.io/challenge-5">Challenge-5 by cetinye</a></iframe>
-                                <p>Challenge-5</p>
-                            </div>
-                            <div>
-								<iframe frameborder="0" src="https://itch.io/embed/933662?border_width=0&amp;bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="206" height="165"><a href="https://cetinye.itch.io/prototype-5">Prototype-5 by cetinye</a></iframe>							
-                                <p>Prototype-5</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/933565?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/challenge-4">Challenge-4 by cetinye</a></iframe>
-                                <p>Challenge-4</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/932956?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/prototype-4">Prototype-4 by cetinye</a></iframe>
-                                <p>Prototype-4</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/931653?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/challenge-3">Challenge-3 by cetinye</a></iframe>
-                                <p>Challenge-3</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/931177?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/prototype-3">Prototype-3 by cetinye</a></iframe>
-                                <p>Prototype-3</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/927235?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/challenge-2">Challenge-2 by cetinye</a></iframe>
-                                <p>Challenge-2</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/926188?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/feedtheanimals">Prototype-2 by cetinye</a></iframe>
-                                <p>Prototype-2</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/927238?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/challenge-1">Challenge-1 by cetinye</a></iframe>
-                                <p>Challenge-1</p>
-                            </div>
-							<div>
-								<iframe frameborder="0" src="https://itch.io/embed/927254?bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/prototype-1">Prototype-1 by cetinye</a></iframe>
-                                <p>Prototype-1</p>
-                            </div>
-                        </div>
-                        <h3>Other Games</h3>
-                        <div class="game-grid">
-                            <div>
-								<iframe frameborder="0" src="https://itch.io/embed/916828?linkback=true&amp;bg_color=252526&amp;fg_color=ffffff&amp;link_color=007acc&amp;border_color=4b4b4b" width="208" height="167"><a href="https://cetinye.itch.io/firstgame">First Game by cetinye</a></iframe>
-								<p>My first game !</p>
-							</div>
-                        </div>
-                    `;
-                    break;
-                case 'awards':
-                    contentDiv.innerHTML = `
-							<h2>Awards</h2>
-							<h3>1st Place In Sectoral Solutions Category!</h3>
-							<span style= "font-family: 'Ubuntu'"; "font-weight: normal;">Genç Beyinler Yeni Fikirler is an inter-university graduation projects competition in Turkey. Our team placed first in the sectoral solutions category and won 10.000 ₺.</span>
-							<p>
-								<a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop" target="_blank">(link to linkedin post)</a>
-							</p>
-							<a href="https://www.linkedin.com/posts/at%C4%B1l%C4%B1m-%C3%BCniversitesi-m%C3%BChendislik-fak%C3%BCltesi_fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-activity-7071383408513290240-lQRT?utm_source=share&utm_medium=member_desktop" target="_blank">
-								<img src="Awards/linkedinPost.png" alt="Linkedin Post">
-							</a>
-						`;
-                    break;
-                case 'research':
-                    contentDiv.innerHTML = `
-					<h2>Research</h2>
-					<h3>Research Title:<span style="font-weight: normal;"> Understanding User Experience (UX) For Virtual Reality Based Surgical Training</span> </h3>
-					<h3>Role:<span style="font-weight: normal;"> Developing the simulation in Unity 3D to be used in the virtual reality surgical training.</span> </h3>
-					<p>
-						<a href="https://doi.org/10.21125/inted.2023.1627" target="_blank">(https://doi.org/10.21125/inted.2023.1627)</a>
-					</p>
-					<embed src="https://doi.org/10.21125/inted.2023.1627" width="1200" height="1080" type="application/pdf"></embed>
-					`;
-                    break;
-                case 'cv':
-                    contentDiv.innerHTML = '<a href="CV/Yunus_Emre_Cetin_CV.pdf">Download CV</a>';
-                    break;
-                default:
-                    contentDiv.innerHTML = '';
-                    break;
-            }
+            <article class="card">
+                <h3>Witmina</h3>
+                <p class="meta">Labor Bilişim · Oct 2023 – present</p>
+                <p>An app that aims to build cognitive skills and collect cognitive data. Built 40+ 2D/3D games for it in Unity and C#. Live on the App Store, Google Play and the web.</p>
+                <ul>
+                    <li>97.22% crash-free users (Firebase Crashlytics)</li>
+                    <li>Unity Addressables, Firebase (Remote Config, Auth, database), ad SDKs including AppLovin MAX, multi-platform builds</li>
+                    <li>Visual effects with Shader Graph and Particle System</li>
+                </ul>
+                <p class="actions">
+                    <a href="https://apps.apple.com/us/app/witmina-brain-games/id6761831731">App Store</a>
+                    <a href="https://play.google.com/store/apps/details?gl=US&amp;hl=en-US&amp;id=com.cognicise.witmina.android">Google Play</a>
+                </p>
+            </article>
 
-            // Set the active button class
-            const activeButton = Array.from(buttons).find(btn => btn.textContent.trim() === section.toUpperCase());
-            if (activeButton) {
-                activeButton.classList.add('active');
-            }
-        }
+            <article class="card">
+                <h3>Special education management panel automation</h3>
+                <p class="meta">Labor Bilişim · Live since Sep 2026</p>
+                <p>Management panel used by 55 special education and rehabilitation centers (about 500 students each on average). Built the browser automation (Selenium, Playwright, Pyppeteer) and the Python FastAPI API on my own: data entry into MEBBİS (the Ministry of National Education system), report retrieval and form filling. Cut a full day of manual work to 30 minutes.</p>
+                <figure>
+                    <ol class="flow">
+                        <li>Panel</li>
+                        <li>FastAPI</li>
+                        <li>Browser automation</li>
+                        <li>MEBBİS</li>
+                    </ol>
+                    <figcaption>Data flow. Screenshots omitted to protect student data.</figcaption>
+                </figure>
+            </article>
 
-        function openGame(gameName) {
-            window.open(`WebGL_Games/${gameName}/index.html`, '_blank');
-        }
+            <article class="card">
+                <h3>Question generation tool</h3>
+                <p class="meta">Labor Bilişim · Python, JavaScript</p>
+                <p>Generates 250 original questions with audio explanations across 48 categories in under 5 minutes and sends them to the question pool via API. Made all technical decisions.</p>
+            </article>
 
-        function openCV() {
-            window.open('CV/Yunus_Emre_Cetin_CV.pdf', '_blank');
-        }
+            <article class="card">
+                <h3>ECE VR</h3>
+                <p class="meta">Graduation project · 2022 – 2023 · Unity, Meta Quest 2</p>
+                <p>Port of the TÜBİTAK project ECE (112K287) to VR. A hand-eye coordination simulation for surgical residents; session data is recorded and compared across sessions. Tested at Hacettepe University, Department of Neurology.</p>
+                <p><strong>1st place, Sectoral Solutions category</strong> — Genç Beyinler Yeni Fikirler 2023 (₺10,000). <a href="https://www.linkedin.com/posts/fak%C3%BCltemiz-yaz%C4%B1l%C4%B1m-ve-bilgisayar-m%C3%BChendisli%C4%9Fi-ugcPost-7071383407728967680-TFsU/">Announcement</a></p>
+                <div class="video">
+                    <iframe src="https://www.youtube-nocookie.com/embed/zatwyxHv6Ls" title="ECE VR demo video" loading="lazy" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                </div>
+            </article>
 
-        showContent('career')
-    </script>
+            <article class="card">
+                <h3>Battleship Online</h3>
+                <p class="meta">Hobby project · Unity, Netcode</p>
+                <p>Server-based online multiplayer, turn-based strategy. Plays in the browser.</p>
+                <iframe class="itch" src="https://itch.io/embed/3252812?bg_color=18181b&amp;fg_color=f4f4f5&amp;link_color=3ea6ff&amp;border_color=3f3f46" width="552" height="167" title="Battleship Online on itch.io" loading="lazy"><a href="https://cetinye.itch.io/battleship-online">Battleship Online by cetinye</a></iframe>
+            </article>
+        </section>
+
+        <section id="publication">
+            <h2>Publication</h2>
+            <p class="meta">Conference paper</p>
+            <p>D. Topalli, <strong>Y.E. Cetin</strong>, B.K. Pamuk, A. Ugurlu, B. Catalok, N.E. Cagiltay. “Understanding User Experience (UX) for Virtual Reality Based Surgical Training.” <em>INTED2023 Proceedings</em>, p. 6166. <a href="https://doi.org/10.21125/inted.2023.1627">doi:10.21125/inted.2023.1627</a></p>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <ol class="timeline">
+                <li>
+                    <p class="meta">Oct 2023 – present</p>
+                    <h3>Game Developer · Labor Bilişim, Ankara</h3>
+                    <p>Witmina games and the tools above. Mentored 6 interns (4 at the same time), did code reviews, applied design patterns (state machine, observer, object pool, singleton).</p>
+                </li>
+                <li>
+                    <p class="meta">Jul – Aug 2022</p>
+                    <h3>Intern · Rootcraft Game Technologies</h3>
+                    <p>3D hyper-casual game “Pinball Race”: stacking and racing with AI bots.</p>
+                </li>
+                <li>
+                    <p class="meta">Aug 2021</p>
+                    <h3>Intern · Kuixo</h3>
+                    <p>2D puzzle and merge game “Big Dot”: dynamic level generation from text files, game design document.</p>
+                </li>
+                <li>
+                    <p class="meta">2019 – 2023</p>
+                    <h3>B.Sc. Software Engineering (English) · Atılım University</h3>
+                    <p>GPA 3.42 / 4.00, honor student.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul class="tags">
+                <li>Unity (2D / 3D / VR)</li>
+                <li>C#</li>
+                <li>Mobile publishing (App Store, Google Play)</li>
+                <li>SDK integration</li>
+                <li>Firebase</li>
+                <li>Shader Graph</li>
+                <li>Unity Profiler</li>
+                <li>Netcode / Mirror (hobby)</li>
+                <li>Python</li>
+                <li>FastAPI</li>
+                <li>JavaScript</li>
+                <li>Selenium / Playwright</li>
+                <li>C# WPF</li>
+                <li>Git</li>
+                <li>Agile</li>
+                <li>Claude Code</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <a href="mailto:cetinye@hotmail.com">cetinye@hotmail.com</a>
+    </footer>
 </body>
-
 </html>
